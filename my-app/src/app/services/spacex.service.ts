@@ -9,6 +9,6 @@ export class SpacexService {
   constructor(private _http: HttpClient) { }
 
   get(){
-    return this._http.get('https://api.spacexdata.com/v3/launches?limit=100');
+    return this._http.get('https://api.spacexdata.com/v3/launches?limit=30');
   }
 }
