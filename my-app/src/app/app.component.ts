@@ -12,16 +12,21 @@ export class AppComponent implements OnInit {
   ngOnInit(): void {
     this.spacexService.get().subscribe((res: any) => {
       this.data=res
-      console.log(this.data)
     })
   }
   getYear(year){
     this.spacexService.getByYear(year).subscribe((res:any)=>{
-      console.log(res)
       this.data=res
     })
   }
-  getLanding(bo){
-    console.log(bo)
+  getLanding(ans){
+    this.spacexService.getByLand(ans).subscribe((res:any)=>{
+      this.data=res
+    })
+  }
+  getLaunching(ans){
+    this.spacexService.getByLaunch(ans).subscribe((res:any)=>{
+      this.data=res
+    })
   }
 }
