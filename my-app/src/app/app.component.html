@@ -11,9 +11,25 @@
 <body style="background-color: rgb(218, 203, 203);">
 
   <div class="container-fluid">
-    <h3>SpaceX Launch Programs</h3>
+    <h4>SpaceX Launch Programs</h4>
     <div class="row">
       <div class="col-md-2" style="background-color:lavender;">
+        <h3><b>Filters</b></h3>
+        <div class="container row">
+          <h5><b>Launch Year</b></h5>
+          <div *ngFor="let year of years"><button type="button" (click)="getYear(year)" class="btn btn-success ml-1 mr-2 mb-2">{{year}}</button>
+          </div>
+        </div>
+        <div class="row">
+          <h5><u>Succesful Launch</u></h5>
+          <button type="button" (click)="getLanding('true')" class="btn btn-success ml-1 mr-2 mb-2">True</button>
+          <button type="button" (click)="getLanding('false')" class="btn btn-success ml-1 mr-2 mb-2">False</button>
+        </div>
+        <div class="row">
+          <h5><u>Succesful Landing</u></h5>
+          <button type="button" (click)="getLanding('true')" class="btn btn-success ml-1 mr-2 mb-2">True</button>
+          <button type="button" (click)="getLanding('false')" class="btn btn-success ml-1 mr-2 mb-2">False</button>
+        </div>
       </div>
       <div class="col-md-10" style="background-color:lavender;">
         <div class="card mr-2 mt-1" *ngFor="let project of data" style="width: 15rem;">
@@ -32,7 +48,6 @@
       </div>
     </div>
   </div>
-
 </body>
 
 </html>
