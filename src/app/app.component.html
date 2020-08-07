@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body style="background-color:lavender;">
+  <div style="font-weight: 300">
+    <h4>SpaceX Launch Programs</h4>
+    <div class="parent">
+      <div class="child1" style="background-color:lavender; border-radius: 6px; height: 600px;">
+        <div class="container">
+          <h3><b>Filters</b></h3>
+          <div style="width: 200px;">
+            <h5 class><u>Launch Year</u></h5>
+            <div>
+              <div class="btn-group" *ngFor="let year of years"><button type="button" (click)="getYear(year)"
+                  class="btn btn-success ml-1 mr-2 mb-2">{{year}}</button>
+              </div>
+            </div>
+          </div>
+          <div>
+            <h5><u>Succesful Launch</u></h5>
+            <button type="button" (click)="getLanding('true')" class="btn btn-success ml-1 mr-2 mb-2">True</button>
+            <button type="button" (click)="getLanding('false')" class="btn btn-success ml-1 mr-2 mb-2">False</button>
+          </div>
+          <div>
+            <h5><u>Succesful Landing</u></h5>
+            <button type="button" (click)="getLanding('true')" class="btn btn-success ml-1 mr-2 mb-2">True</button>
+            <button type="button" (click)="getLanding('false')" class="btn btn-success ml-1 mr-2 mb-2">False</button>
+          </div>
+        </div>
+      </div>
+      <div class="child2" style="background-color:lavender;">
+        <div class="card mr-2 mt-1" *ngFor="let project of data" style="width: 15rem;">
+          <img class="card-img-top" src="{{project.links.mission_patch_small}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{project.mission_name}}</h5>
+            <ul class="card-text">
+              <li><b>Mission Id: {{project.flight_number}}</b></li>
+              <li><b>Launch Year: {{project.launch_year}}</b></li>
+              <li><b>Succesful Launch: {{project.launch_success}}</b></li>
+              <li><b>Succesful Landing: {{project.rocket.fairings==null? 'false':project.rocket.fairings.recovered}}</b>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p><h5>Developed By: - Ashish Rawat</h5>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<router-outlet></router-outlet>
