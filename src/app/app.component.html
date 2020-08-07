@@ -18,20 +18,20 @@
           <div style="width: 200px;">
             <h5 class><u>Launch Year</u></h5>
             <div>
-              <div class="btn-group" *ngFor="let year of years"><button type="button" (click)="getYear(year)"
+              <div class="btn-group" *ngFor="let year of years"><button type="button" (click)="getFilter(year,null,null)"
                   class="btn btn-success ml-1 mr-2 mb-2">{{year}}</button>
               </div>
             </div>
           </div>
           <div>
             <h5><u>Succesful Launch</u></h5>
-            <button type="button" name="launch" (click)="getLaunching('true')" class="btn btn-success ml-1 mr-2 mb-2">True</button>
-            <button type="button" name="launch" (click)="getLaunching('false')" class="btn btn-success ml-1 mr-2 mb-2">False</button>
+            <button type="button" name="launch" (click)="getFilter(null,'true',null)" class="btn btn-success ml-1 mr-2 mb-2">True</button>
+            <button type="button" name="launch" (click)="getFilter(null,'false',null)" class="btn btn-success ml-1 mr-2 mb-2">False</button>
           </div>
           <div>
             <h5><u>Succesful Landing</u></h5>
-            <button type="button" name="land" (click)="getLanding('true')" class="btn btn-success ml-1 mr-2 mb-2">True</button>
-            <button type="button" name="land" (click)="getLanding('false')" class="btn btn-success ml-1 mr-2 mb-2">False</button>
+            <button type="button" name="land" (click)="getFilter(null,null,'true')" class="btn btn-success ml-1 mr-2 mb-2">True</button>
+            <button type="button" name="land" (click)="getFilter(null,null,'false')" class="btn btn-success ml-1 mr-2 mb-2">False</button>
           </div>
         </div>
       </div>
