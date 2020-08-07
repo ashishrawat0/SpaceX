@@ -7,6 +7,6 @@
 * Steps to run the project.
     * Download the repo.
     * npm install
-    * npm run -> starts on localhost 5000
+    * npm run -> starts on localhost 4200
 
 #### Info about the api -> There is a error in api in every endpoint it returns the same data
