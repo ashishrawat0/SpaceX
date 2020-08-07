@@ -1,4 +1,4 @@
-# SpaceX Program Projects
+# SpaceX Program Project
 
 * Tech Stack Used
   * Angular
