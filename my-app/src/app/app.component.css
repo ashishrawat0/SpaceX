@@ -1,7 +1,25 @@
 .card {display:inline-block;}
 .btn {height: 35px; width: 58px;}
+.parent{
+  display: flex;
+  flex-direction: row;
+}
+.child1{
+  flex: 0.5 ;
+  background-color: white !important;
+}
+.child2{
+  flex: 4;
+  margin-left: 10px;
+
+}
 @media only screen and (max-width: 400px) {
-     body{
-      width: 60%;
+    .parent{
+      flex-direction: column;
+      margin-left: 30px;
+    }
+    .child1{
+      margin-left: 20px;
+      width: 240px;
     }
   }
