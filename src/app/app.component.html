@@ -25,13 +25,13 @@
           </div>
           <div>
             <h5><u>Succesful Launch</u></h5>
-            <button type="button" (click)="getLanding('true')" class="btn btn-success ml-1 mr-2 mb-2">True</button>
-            <button type="button" (click)="getLanding('false')" class="btn btn-success ml-1 mr-2 mb-2">False</button>
+            <button type="button" name="launch" (click)="getLaunching('true')" class="btn btn-success ml-1 mr-2 mb-2">True</button>
+            <button type="button" name="launch" (click)="getLaunching('false')" class="btn btn-success ml-1 mr-2 mb-2">False</button>
           </div>
           <div>
             <h5><u>Succesful Landing</u></h5>
-            <button type="button" (click)="getLanding('true')" class="btn btn-success ml-1 mr-2 mb-2">True</button>
-            <button type="button" (click)="getLanding('false')" class="btn btn-success ml-1 mr-2 mb-2">False</button>
+            <button type="button" name="land" (click)="getLanding('true')" class="btn btn-success ml-1 mr-2 mb-2">True</button>
+            <button type="button" name="land" (click)="getLanding('false')" class="btn btn-success ml-1 mr-2 mb-2">False</button>
           </div>
         </div>
       </div>
@@ -44,7 +44,7 @@
               <li><b>Mission Id: {{project.flight_number}}</b></li>
               <li><b>Launch Year: {{project.launch_year}}</b></li>
               <li><b>Succesful Launch: {{project.launch_success}}</b></li>
-              <li><b>Succesful Landing: {{project.rocket.fairings==null? 'false':project.rocket.fairings.recovered}}</b>
+              <li><b>Succesful Landing: {{project.rocket.first_stage==null? 'false':project.rocket.first_stage.cores[0].land_success}}</b>
               </li>
             </ul>
           </div>

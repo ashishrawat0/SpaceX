@@ -13,12 +13,12 @@ export class SpacexService {
   }
   getByYear(year){
     console.log(year)
-    return this._http.get(`https://api.spacexdata.com/v3/launches?limit=50&amp;launch_success=true&amp;land_success=true&amp;launch_year=${year}`)
+    return this._http.get(`https://api.spacexdata.com/v3/launches?limit=100&launch_year=${year}`)
   }
   getByLand(ans){
-    return this._http.get(`https://api.spacexdata.com/v3/launches?limit=50&amp;land_success=${ans}`)
+    return this._http.get(`https://api.spacexdata.com/v3/launches?limit=50&land_success=${ans}`)
   }
   getByLaunch(ans){
-    return this._http.get(`https://api.spacexdata.com/v3/launches?limit=50&amp;launch_success=${ans}`)
+    return this._http.get(`https://api.spacexdata.com/v3/launches?limit=50&launch_success=${ans}`)
   }
 }
